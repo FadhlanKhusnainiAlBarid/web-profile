@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #background {
+        /* background-color: rgb(18 18 18); */
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+
+      .nama {
+        color: white;
+        font-family: fantasy;
+        font-weight: normal;
+        font-size: 32px;
+      }
+
+      #list-menu {
+        list-style-type: none;
+      }
+
+      .menu {
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .menu:hover {
+        background-color: #4169e1;
+        border-radius: 5px;
+      }
+
+      #about {
+        color: white;
+        font-size: 3.5rem;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      .judul {
+        color: white;
+        font-size: 4rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .judul-perjalanan {
+        margin-bottom: 15px;
+        color: white;
+        font-size: 2rem;
+        font-family: sans-serif;
+      }
+
+      .text-paragraf {
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 2.25rem;
+      }
+
+      .kontak {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      #phone-icon {
+        filter: invert(1);
+        width: 35px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #background {
+          background-color: #00ff11;
+        }
+        .nama {
+          justify-self: center;
+        }
+        #list-menu {
+          justify-self: center;
+        }
+        li {
+          justify-self: center;
+          margin-bottom: 20px;
+        }
+        #header {
+          display: inline;
+        }
+        .content-perjalanan {
+          display: inline;
+        }
+        .img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      @media only screen and (min-width: 600px) {
+        #background {
+          background-color: #4169e1;
+        }
+        .nama {
+          justify-self: center;
+        }
+        #list-menu {
+          justify-self: center;
+        }
+        li {
+          justify-self: center;
+          margin-bottom: 20px;
+        }
+        .img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        #background {
+          background-color: #ff0066;
+        }
+        #navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        #list-menu {
+          display: flex;
+          gap: 20px;
+        }
+        li {
+          margin-bottom: 0px;
+        }
+        #header {
+          display: flex;
+          gap: 20px;
+        }
+        .content-perjalanan {
+          display: flex;
+          gap: 20px;
+        }
+        .img {
+          width: 40%;
+          object-fit: cover;
+        }
+        #Video {
+          width: 715px;
+          height: 600px;
+        }
+      }
+    </style>
+  </head>
+
+  <body id="background">
+    <div id="container" style="justify-self: center; max-width: 1536px">
+      <div id="navbar" style="padding-top: 0.5rem; margin-bottom: 2.25rem">
+        <h1 class="nama">Luthfi Halimawan</h1>
+        <ul id="list-menu" style="padding: 0px">
+          <li>
+            <a href="#Biografi" class="menu"> Biografi </a>
+          </li>
+          <li>
+            <a href="#Perjalanan" class="menu"> Perjalanan </a>
+          </li>
+          <li>
+            <a href="#Video" class="menu"> Video </a>
+          </li>
+          <li>
+            <a href="#Kontak" class="menu"> Kontak </a>
+          </li>
+        </ul>
+      </div>
+      <div id="header" style="margin-bottom: 2.25rem">
+        <h1 id="about">
+          Dikenal dengan nama panggung Chief V,
+          <span style="color: aqua">DJ</span>
+          , <span style="color: aquamarine"> Pengusaha Muda</span>,
+          <span style="color: crimson"> Gaming Streamer </span>,
+          <span style="color: red"> Content Director Alter Ego</span>.
+        </h1>
+        <img
+          class="img"
+          src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1041/2024/01/12/Gambar-WhatsApp-2024-01-12-pukul-083225_957db19e-2566567490.jpg"
+          alt="Luthfi Halimawan"
+        />
+      </div>
+
+      <h1 id="Biografi" class="judul">Biografi</h1>
+      <p class="text-paragraf">
+        Luthfi Halimawan, atau akrab disapa Upi, adalah seorang YouTuber,
+        gamers, dan pengusaha muda asal Bandung yang lahir pada 21 Januari 1994.
+        Setelah kuliah, ia sempat menjadi DJ sebelum akhirnya mencoba
+        peruntungan di dunia bisnis. Meski gagal dalam usaha kuliner, Luthfi
+        sukses membangun karier sebagai konten kreator gaming di YouTube sejak
+        2016 dengan lebih dari 2 juta subscribers. Ia juga mendirikan clothing
+        line bernama Faith Industries yang mengusung tema pop kultur Jepang
+        serta menjadi brand ambassador berbagai produk gaming. Di kehidupan
+        pribadi, ia menikah dengan Dea Aulia Firdaus pada Desember 2021 setelah
+        berpacaran selama empat tahun. Kini, Luthfi dikenal sebagai sosok
+        inspiratif dengan beragam prestasi di berbagai bidang.
+      </p>
+
+      <h1 id="Perjalanan" class="judul">Perjalanan</h1>
+
+      <h3 class="judul-perjalanan">1. Mengawali Karier Sebagai DJ</h3>
+      <div class="content-perjalanan">
+        <p class="text-paragraf">
+          Sebelum merambah ke dunia esports, Luthfi Halimawan mencoba
+          peruntungannya sebagai DJ pada tahun 2014. Meski berbeda dari jalur
+          yang ditempuhnya sekarang, pengalamannya sebagai DJ membuktikan
+          keberaniannya menjajal berbagai bidang hiburan. Rekam jejak ini pernah
+          dijadikan bahan bercandaan oleh sahabatnya, Fandi, "Sia nge-DJ Pi?"
+          yang kemudian viral sebagai meme dan shitposting.
+        </p>
+        <img
+          class="img"
+          src="https://api.duniagames.co.id/api/content/upload/file/19822681991698663364.jpg"
+          alt=""
+        />
+      </div>
+
+      <h3 class="judul-perjalanan">2. Pengusaha Muda</h3>
+      <div class="content-perjalanan">
+        <p class="text-paragraf">
+          Ketangguhan Luthfi sebagai seorang pebisnis terlihat ketika ia
+          mendirikan Faith Industries, sebuah bisnis di bidang clothing. Dengan
+          mengusung konsep budaya pop kultur Jepang dalam koleksi terbatasnya,
+          Luthfi berhasil menunjukkan kepiawaiannya dalam menggabungkan passion
+          for fashion dengan cinta akan gaming. Bahkan Faith Industries pernah
+          menjalin kolaborasi dengan organisasi esports terkemuka, EVOS Esports.
+        </p>
+        <img class="img" src="./image/FTH.png" alt="" />
+      </div>
+
+      <h3 class="judul-perjalanan">3. Gaming Streamer</h3>
+      <div class="content-perjalanan">
+        <p class="text-paragraf">
+          Sebagai seorang YouTuber gaming, Luthfi Halimawan meraih popularitas
+          melalui konten-konten gaming yang inovatif dan menghibur. Ia
+          membuktikan bahwa kecintaannya pada game tidak hanya sebatas hobi,
+          tetapi juga media untuk menghibur banyak penonton. Sebelumnya, Bang
+          Upi konsisten live streaming di Facebook dan diperkenalkan sebagai
+          gaming creator oleh META.
+        </p>
+        <img
+          class="img"
+          src="https://i.ytimg.com/vi/0oqwQaGD57Y/maxresdefault.jpg"
+          alt=""
+        />
+      </div>
+
+      <h3 class="judul-perjalanan">4. Content Director Alter Ego</h3>
+      <div class="content-perjalanan">
+        <p class="text-paragraf">
+          Dengan keahliannya dalam mengelola konten, Luthfi Halimawan resmi
+          bergabung dengan Alter Ego Esports sebagai Content Director. Perannya
+          mencakup strategi dan kreativitas dalam menciptakan konten yang
+          menarik, memperkuat citra tim, dan merajut hubungan erat dengan
+          komunitasnya.
+        </p>
+        <img
+          class="img"
+          src="https://assets.ggwp.id/2025/02/luthfi-halimawan-coaching-staff-alter-ego-2.jpg"
+          alt=""
+        />
+      </div>
+
+      <div style="justify-self: center; margin-top: 50px">
+        <iframe
+          id="Video"
+          src="https://www.youtube.com/embed/HWzai25K_Ko?si=r41RsRBnHmFqRMKm"
+          title="Video 1.wmv"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div id="footer" style="margin-top: 10px; padding: 30p">
+        <h1 id="Kontak" class="judul">Kontak</h1>
+        <div style="display: flex; justify-content: space-between">
+          <span class="kontak">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="40"
+              height="40"
+              viewBox="0 0 50 50"
+            >
+              <path
+                fill="white"
+                d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
+              ></path>
+            </svg>
+            <a
+              style="color: white; font-size: 24px"
+              href="https://www.instagram.com/luthfihalimawan/"
+            >
+              luthfihalimawan</a
+            >
+          </span>
+          <span class="kontak">
+            <img
+              id="phone-icon"
+              src="./image/telephone.png"
+              alt="telephone"
+              width="25"
+            />
+            <p style="color: white; font-size: 24px">081294584704</p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
