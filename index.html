@@ -15,13 +15,14 @@
     <style>
       #background {
         background-color: #edededed;
-        padding: 0px 10px;
         margin: 0px 0px;
       }
 
-      #container {
+      .container {
+        position: relative;
         justify-self: center;
-        max-width: 1200px;
+        max-width: 1280px;
+        width: 97%;
       }
 
       #navbar {
@@ -61,8 +62,33 @@
 
       .img {
         border-radius: 20px;
+        /* margin-right: 10px; */
       }
 
+      .biografi-parallax {
+        position: relative;
+        background-image: url("https://hypeabis.id/assets/content/20230110120515000000lu4.jpeg");
+        background-attachment: fixed;
+        background-size: cover;
+        padding-bottom: 5px;
+      }
+
+      .kontak-parallax {
+        position: relative;
+        background-image: url("./image/P3\ shadow\ pc.png");
+        background-attachment: fixed;
+        background-repeat: repeat;
+        padding-bottom: 5px;
+      }
+
+      .overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
       .judul {
         color: black;
         font-family: "Oswald", sans-serif;
@@ -79,6 +105,11 @@
         color: black;
         font-family: "Times New Roman", Times, serif;
         margin: 0px 0px 0px 0px;
+      }
+
+      .content-perjalanan {
+        margin-inline-start: 20px !important;
+        margin-inline-end: 20px !important;
       }
 
       .judul-perjalanan {
@@ -111,6 +142,7 @@
       }
 
       #Kontak {
+        position: relative;
         margin-bottom: 30px;
       }
 
@@ -121,6 +153,10 @@
       }
 
       @media screen and (max-width: 768px) {
+        #navbar {
+          margin-bottom: 20px;
+        }
+
         #nama {
           justify-self: center;
           font-size: 24px;
@@ -135,6 +171,10 @@
           font-size: 12px;
         }
 
+        #header {
+          margin-bottom: 10px;
+        }
+
         #about {
           font-size: 24px;
           margin-bottom: 10px;
@@ -143,6 +183,10 @@
         .img {
           width: 100%;
           object-fit: cover;
+        }
+
+        .biografi-parallax {
+          background-position: 50% center;
         }
 
         .judul {
@@ -155,6 +199,8 @@
         }
 
         .content-perjalanan {
+          /* margin-inline-start: 5% !important;
+          margin-inline-end: 5% !important; */
           margin-bottom: 15px;
         }
 
@@ -184,7 +230,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: 30px;
+          margin-bottom: 25px;
         }
 
         #list-menu {
@@ -208,6 +254,11 @@
 
         .img {
           width: 40%;
+        }
+
+        .parallax-bg {
+          /* background-position: 50% center; */
+          width: 100%;
         }
 
         .judul {
@@ -325,7 +376,7 @@
         }
 
         .judul-video {
-          font-size: 15px;
+          font-size: 18px;
         }
 
         #footer-kontak {
@@ -349,54 +400,64 @@
   </head>
 
   <body id="background">
-    <div id="container">
-      <nav id="navbar">
-        <h1 id="nama">Luthfi Halimawan</h1>
-        <ul id="list-menu" style="padding: 0px">
-          <li>
-            <a href="#Biografi" class="menu"> Biografi </a>
-          </li>
-          <li>
-            <a href="#Perjalanan" class="menu"> Perjalanan </a>
-          </li>
-          <li>
-            <a href="#Video-container" class="menu"> Video </a>
-          </li>
-          <li>
-            <a href="#Kontak" class="menu"> Kontak </a>
-          </li>
-        </ul>
-      </nav>
-      <header id="header">
-        <h1 id="about">
-          Dikenal dengan nama panggung Chief V, DJ, Pengusaha Muda, Gaming
-          Streamer, Content Director Alter Ego.
-        </h1>
-        <img
-          class="img"
-          src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1041/2024/01/12/Gambar-WhatsApp-2024-01-12-pukul-083225_957db19e-2566567490.jpg"
-          alt="Luthfi Halimawan Alter Igo"
-        />
-      </header>
+    <!-- <div id="container"> -->
+    <nav id="navbar" class="container">
+      <h1 id="nama">Luthfi Halimawan</h1>
+      <ul id="list-menu" style="padding: 0">
+        <li>
+          <a href="#Biografi" class="menu"> Biografi </a>
+        </li>
+        <li>
+          <a href="#Perjalanan" class="menu"> Perjalanan </a>
+        </li>
+        <li>
+          <a href="#Video-container" class="menu"> Video </a>
+        </li>
+        <li>
+          <a href="#Kontak" class="menu"> Kontak </a>
+        </li>
+      </ul>
+    </nav>
 
-      <h1 id="Biografi" class="judul">Biografi</h1>
-      <p class="text-paragraf space-persection">
-        Luthfi Halimawan, atau akrab disapa Upi, adalah seorang YouTuber,
-        gamers, dan pengusaha muda asal Bandung yang lahir pada 21 Januari 1994.
-        Setelah kuliah, ia sempat menjadi DJ sebelum akhirnya mencoba
-        peruntungan di dunia bisnis. Meski gagal dalam usaha kuliner, Luthfi
-        sukses membangun karier sebagai konten kreator gaming di YouTube sejak
-        2016 dengan lebih dari 2 juta subscribers. Ia juga mendirikan clothing
-        line bernama Faith Industries yang mengusung tema pop kultur Jepang
-        serta menjadi brand ambassador berbagai produk gaming. Di kehidupan
-        pribadi, ia menikah dengan Dea Aulia Firdaus pada Desember 2021 setelah
-        berpacaran selama empat tahun. Kini, Luthfi dikenal sebagai sosok
-        inspiratif dengan beragam prestasi di berbagai bidang.
-      </p>
+    <header id="header" class="container">
+      <h1 id="about">
+        Dikenal dengan nama panggung Chief V, DJ, Pengusaha Muda, Gaming
+        Streamer, Content Director Alter Ego.
+      </h1>
+      <img
+        class="img"
+        src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1041/2024/01/12/Gambar-WhatsApp-2024-01-12-pukul-083225_957db19e-2566567490.jpg"
+        alt="Luthfi Halimawan Alter Igo"
+      />
+    </header>
 
-      <h1 id="Perjalanan" class="judul">Perjalanan</h1>
+    <div class="biografi-parallax">
+      <div class="overlay"></div>
+      <div class="container">
+        <h1 id="Biografi" class="judul" style="color: #fff">Biografi</h1>
+        <p
+          class="text-paragraf space-persection"
+          style="color: #fff; font-weight: 500"
+        >
+          Luthfi Halimawan, atau akrab disapa Upi, adalah seorang YouTuber,
+          gamers, dan pengusaha muda asal Bandung yang lahir pada 21 Januari
+          1994. Setelah kuliah, ia sempat menjadi DJ sebelum akhirnya mencoba
+          peruntungan di dunia bisnis. Meski gagal dalam usaha kuliner, Luthfi
+          sukses membangun karier sebagai konten kreator gaming di YouTube sejak
+          2016 dengan lebih dari 2 juta subscribers. Ia juga mendirikan clothing
+          line bernama Faith Industries yang mengusung tema pop kultur Jepang
+          serta menjadi brand ambassador berbagai produk gaming. Di kehidupan
+          pribadi, ia menikah dengan Dea Aulia Firdaus pada Desember 2021
+          setelah berpacaran selama empat tahun. Kini, Luthfi dikenal sebagai
+          sosok inspiratif dengan beragam prestasi di berbagai bidang.
+        </p>
+      </div>
+    </div>
 
-      <h3 class="judul-perjalanan">1. Mengawali Karier Sebagai DJ</h3>
+    <h1 id="Perjalanan" class="judul container">Perjalanan</h1>
+
+    <h3 class="judul-perjalanan container">1. Mengawali Karier Sebagai DJ</h3>
+    <div class="container">
       <figure class="content-perjalanan">
         <figcaption class="text-paragraf">
           Sebelum merambah ke dunia esports, Luthfi Halimawan mencoba
@@ -412,8 +473,10 @@
           alt="Luthfi Halimawan DJ saat muda"
         />
       </figure>
+    </div>
 
-      <h3 class="judul-perjalanan">2. Pengusaha Muda</h3>
+    <h3 class="judul-perjalanan container">2. Pengusaha Muda</h3>
+    <div class="container">
       <figure class="content-perjalanan">
         <img
           class="img"
@@ -429,8 +492,10 @@
           menjalin kolaborasi dengan organisasi esports terkemuka, EVOS Esports.
         </figcaption>
       </figure>
+    </div>
 
-      <h3 class="judul-perjalanan">3. Gaming Streamer</h3>
+    <h3 class="judul-perjalanan container">3. Gaming Streamer</h3>
+    <div class="container">
       <figure class="content-perjalanan">
         <figcaption class="text-paragraf">
           Sebagai seorang YouTuber gaming, Luthfi Halimawan meraih popularitas
@@ -446,8 +511,10 @@
           alt="https://www.google.com/search?sca_esv=3d270dcc4f030842&biw=1277&bih=605&hl=id&sxsrf=AHTn8zq_fp8qLMBpactCJjU1rjQ3WYB_rQ:1740735207726&udm=48&si=APYL9buGmpQYpE6338c1FuRm_huDhoS-SW7UwUk0c_FqJnHYAdXy75cy21r0nXDWc0BvJ8xb4WEPU4XpWZ1jRgRGyObvr8lskhWGRBUIMaY44hSpa3j1fwKRKvpjvWaEOs-cOkgZkjMMDl72ZbsHQI8J-_oqNZ7X70Fgv_RsON_8-xZOGamVuNbolITQjamwJ6y0gVWcwNds&vsint=CAIqDAoCCAcSAggiGAAgATojChYNAAAAPxUAAAA_HQAAgD8lAACAPzABEOgHGLIEJQAAgD8&vsrid=CNWavd2oi8bYiAEQAhgBIiQ4ODUwMjk4NC04ZDZmLTQ1MWYtOWFkMy1iNDdiYTFkMTFhMTg&gsessionid=njq6ofcy8ClWRYJgn5Lnb7WeYmZu_vu1w2OuDKzfZOkOVYOSwDsiwQ&lsessionid=u3P4jjCRFWQUG4lDn1XnedVWDCvar7P9eyuU7AQ8p8LXaTvSzStIkA&vsdim=1000,562&lns_mode=un&source=lns.web.gsbubb&sa=X&ved=2ahUKEwiXk9H9h-aLAxU8oK8BHdJtAuQQpOwNegQIFxAA"
         />
       </figure>
+    </div>
 
-      <h3 class="judul-perjalanan">4. Content Director Alter Ego</h3>
+    <h3 class="judul-perjalanan container">4. Content Director Alter Ego</h3>
+    <div class="container">
       <figure class="content-perjalanan space-persection">
         <img
           class="img"
@@ -462,9 +529,12 @@
           komunitasnya.
         </figcaption>
       </figure>
+    </div>
 
-      <div id="Video-container">
-        <h1 id="Kontak" class="judul">Video</h1>
+    <div class="kontak-parallax">
+      <div class="overlay"></div>
+      <div class="container">
+        <h1 id="Kontak" class="judul" style="color: #fff">Video</h1>
         <div id="video-flex">
           <div class="video-konten">
             <iframe
@@ -476,7 +546,9 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
-            <h3 class="judul-video">Kantor Baru Faith Industries 2023</h3>
+            <h3 class="judul-video" style="color: #fff">
+              Kantor Baru Faith Industries 2023
+            </h3>
           </div>
           <div class="video-konten">
             <iframe
@@ -488,7 +560,7 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
-            <h3 class="judul-video">
+            <h3 class="judul-video" style="color: #fff">
               Berhasil Stream Bareng Youtuber Terkenal
             </h3>
           </div>
@@ -502,64 +574,68 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
-            <h3 class="judul-video">Kantor Baru Faith Industries 2023</h3>
+            <h3 class="judul-video" style="color: #fff">
+              Kantor Baru Faith Industries 2023
+            </h3>
           </div>
         </div>
       </div>
-
-      <footer id="Kontak">
-        <h1 class="judul">Kontak</h1>
-        <div id="footer-kontak">
-          <span class="kontak">
-            <svg
-              class="icons"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                fill="#000000"
-              />
-              <path
-                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-                fill="#000000"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
-                fill="#000000"
-              />
-            </svg>
-            <a
-              class="text-icons"
-              href="https://www.instagram.com/luthfihalimawan/"
-            >
-              luthfihalimawan</a
-            >
-          </span>
-          <span class="kontak">
-            <svg
-              class="icons"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21 5.5C21 14.0604 14.0604 21 5.5 21C5.11378 21 4.73086 20.9859 4.35172 20.9581C3.91662 20.9262 3.69906 20.9103 3.50103 20.7963C3.33701 20.7019 3.18146 20.5345 3.09925 20.364C3 20.1582 3 19.9181 3 19.438V16.6207C3 16.2169 3 16.015 3.06645 15.842C3.12515 15.6891 3.22049 15.553 3.3441 15.4456C3.48403 15.324 3.67376 15.255 4.05321 15.117L7.26005 13.9509C7.70153 13.7904 7.92227 13.7101 8.1317 13.7237C8.31637 13.7357 8.49408 13.7988 8.64506 13.9058C8.81628 14.0271 8.93713 14.2285 9.17882 14.6314L10 16C12.6499 14.7999 14.7981 12.6489 16 10L14.6314 9.17882C14.2285 8.93713 14.0271 8.81628 13.9058 8.64506C13.7988 8.49408 13.7357 8.31637 13.7237 8.1317C13.7101 7.92227 13.7904 7.70153 13.9509 7.26005L13.9509 7.26005L15.117 4.05321C15.255 3.67376 15.324 3.48403 15.4456 3.3441C15.553 3.22049 15.6891 3.12515 15.842 3.06645C16.015 3 16.2169 3 16.6207 3H19.438C19.9181 3 20.1582 3 20.364 3.09925C20.5345 3.18146 20.7019 3.33701 20.7963 3.50103C20.9103 3.69907 20.9262 3.91662 20.9581 4.35173C20.9859 4.73086 21 5.11378 21 5.5Z"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="text-icons">081294584704</p>
-          </span>
-        </div>
-      </footer>
     </div>
+
+    <footer id="Kontak" class="container">
+      <h1 class="judul">Kontak</h1>
+      <div id="footer-kontak">
+        <span class="kontak">
+          <svg
+            class="icons"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+              fill="#000000"
+            />
+            <path
+              d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+              fill="#000000"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+              fill="#000000"
+            />
+          </svg>
+          <a
+            class="text-icons"
+            href="https://www.instagram.com/luthfihalimawan/"
+          >
+            luthfihalimawan</a
+          >
+        </span>
+        <span class="kontak">
+          <svg
+            class="icons"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 5.5C21 14.0604 14.0604 21 5.5 21C5.11378 21 4.73086 20.9859 4.35172 20.9581C3.91662 20.9262 3.69906 20.9103 3.50103 20.7963C3.33701 20.7019 3.18146 20.5345 3.09925 20.364C3 20.1582 3 19.9181 3 19.438V16.6207C3 16.2169 3 16.015 3.06645 15.842C3.12515 15.6891 3.22049 15.553 3.3441 15.4456C3.48403 15.324 3.67376 15.255 4.05321 15.117L7.26005 13.9509C7.70153 13.7904 7.92227 13.7101 8.1317 13.7237C8.31637 13.7357 8.49408 13.7988 8.64506 13.9058C8.81628 14.0271 8.93713 14.2285 9.17882 14.6314L10 16C12.6499 14.7999 14.7981 12.6489 16 10L14.6314 9.17882C14.2285 8.93713 14.0271 8.81628 13.9058 8.64506C13.7988 8.49408 13.7357 8.31637 13.7237 8.1317C13.7101 7.92227 13.7904 7.70153 13.9509 7.26005L13.9509 7.26005L15.117 4.05321C15.255 3.67376 15.324 3.48403 15.4456 3.3441C15.553 3.22049 15.6891 3.12515 15.842 3.06645C16.015 3 16.2169 3 16.6207 3H19.438C19.9181 3 20.1582 3 20.364 3.09925C20.5345 3.18146 20.7019 3.33701 20.7963 3.50103C20.9103 3.69907 20.9262 3.91662 20.9581 4.35173C20.9859 4.73086 21 5.11378 21 5.5Z"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="text-icons">081294584704</p>
+        </span>
+      </div>
+    </footer>
+
+    <!-- </div> -->
   </body>
 </html>
