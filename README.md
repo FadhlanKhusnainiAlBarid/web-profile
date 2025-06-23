@@ -31,7 +31,6 @@ Sebuah web blog statis sederhana yang menampilkan profil, perjalanan karier, vid
 
 - `index.html` : Halaman utama web blog
 - `image/` : Folder gambar pendukung (logo, foto, dsb)
-- `styles.css` : (Jika ada) file CSS tambahan
 
 ## Catatan
 
