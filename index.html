@@ -12,6 +12,9 @@
       rel="stylesheet"
     />
 
+    <!-- Link Tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
     <style>
       #background {
         background-color: #edededed;
@@ -23,6 +26,7 @@
         justify-self: center;
         max-width: 1280px;
         width: 97%;
+        overflow: hidden;
       }
 
       #navbar {
@@ -396,6 +400,24 @@
       .space-persection {
         margin-bottom: 30px;
       }
+
+      @keyframes trans-fleft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      @keyframes trans-fright {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
     </style>
   </head>
 
@@ -420,12 +442,13 @@
     </nav>
 
     <header id="header" class="container">
-      <h1 id="about">
+      <h1 id="about" class="" style="animation: trans-fleft 1.2s ease-in">
         Dikenal dengan nama panggung Chief V, DJ, Pengusaha Muda, Gaming
         Streamer, Content Director Alter Ego.
       </h1>
       <img
         class="img"
+        style="animation: trans-fright 1.2s ease-in"
         src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1041/2024/01/12/Gambar-WhatsApp-2024-01-12-pukul-083225_957db19e-2566567490.jpg"
         alt="Luthfi Halimawan Alter Igo"
       />
@@ -635,6 +658,164 @@
         </span>
       </div>
     </footer>
+
+    <script>
+      // async function getWeather(nameCity) {
+      //   const getCityUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${nameCity}&count=1&language=en&format=json`;
+
+      //   try {
+      //     const response_Geocoding = await fetch(getCityUrl);
+      //     if (!response_Geocoding.ok) {
+      //       console.error(error);
+      //     }
+
+      //     const dataCity = await response_Geocoding.json();
+      //     const getWeatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${dataCity.results[0].latitude}&longitude=${dataCity.results[0].longitude}&daily=weather_code,temperature_2m_max,temperature_2m_min&current=temperature_2m,wind_speed_10m,relative_humidity_2m,weather_code`;
+      //     console.log(dataCity.results[0]);
+
+      //     const response_Weather_Forecast = await fetch(getWeatherUrl);
+      //     const dataWeather = await response_Weather_Forecast.json();
+
+      //     if (response_Weather_Forecast.ok) {
+      //       icon_weather_today.src =
+      //         icons_weather[dataWeather.current.weather_code].day.image;
+      //       console.log(
+      //         icons_weather[dataWeather.current.weather_code].day.image
+      //       );
+      //       console.log(dataWeather);
+      //       console.log(icons_weather);
+      //     }
+      //     // console.log(dataWeather);
+      //   } catch (error) {
+      //     console.error(error);
+      //   }
+      // }
+
+      // getWeather("Jakarta");
+
+      async function getWeather(nameCity) {
+        const getCityUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${nameCity}&count=1&language=en&format=json`;
+
+        try {
+          const response_Geocoding = await fetch(getCityUrl);
+          if (!response_Geocoding.ok) {
+            console.error(error);
+          }
+
+          const dataCity = await response_Geocoding.json();
+          const getWeatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${dataCity.results[0].latitude}&longitude=${dataCity.results[0].longitude}&daily=weather_code,temperature_2m_max,temperature_2m_min&current=temperature_2m,wind_speed_10m,relative_humidity_2m,weather_code`;
+          console.log(dataCity.results[0]);
+
+          const response_Weather_Forecast = await fetch(getWeatherUrl);
+          const dataWeather = await response_Weather_Forecast.json();
+
+          if (response_Weather_Forecast.ok) {
+            current_icon_weather.src =
+              icons_weather[dataWeather.current.weather_code].day.image;
+            console.log(
+              icons_weather[dataWeather.current.weather_code].day.image
+            );
+            console.log(dataWeather);
+            console.log(icons_weather);
+          }
+          // console.log(dataWeather);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      getWeather("Jakarta");
+
+      
+      // 13/03/25
+      async function getWeather() {
+        event.preventDefault();
+        const nameCity = search_City.value;
+
+        const getCityUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${nameCity}&count=1&language=en&format=json`;
+
+        const currentTimeFormater = (
+          country,
+          country_code,
+          timezone,
+          value
+        ) => {
+          const options = {
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true,
+            weekday: "long",
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+            timeZone: timezone,
+          };
+
+          // 05:05 PM, Mon, Nov 23, 2020
+
+          const newTime = new Date(value);
+          return newTime.toLocaleDateString(
+            `${country.slice(0, 2)}-${country_code}`,
+            options
+          );
+        };
+
+        const dailyTimeFormater = (value) => {
+          const Option = {
+            day: "short",
+          };
+
+          const newTime = new Date(value);
+          return newTime.toLocaleDateString(Option);
+        };
+
+        try {
+          const response_Geocoding = await fetch(getCityUrl);
+          if (!response_Geocoding.ok) {
+            console.error(error);
+          }
+
+          const dataCity = await response_Geocoding.json();
+          const getWeatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${dataCity.results[0].latitude}&longitude=${dataCity.results[0].longitude}&daily=weather_code,temperature_2m_max,temperature_2m_min&current=temperature_2m,wind_speed_10m,relative_humidity_2m,weather_code`;
+          console.log(dataCity.results[0]);
+
+          const response_Weather_Forecast = await fetch(getWeatherUrl);
+          const dataWeather = await response_Weather_Forecast.json();
+
+          if (response_Weather_Forecast.ok) {
+            current_time.innerText = currentTimeFormater(
+              dataCity.results[0].country,
+              dataCity.results[0].country_code,
+              dataCity.results[0].timezone,
+              dataWeather.current.time
+            );
+
+            current_icon_weather.src =
+              icons_weather[dataWeather.current.weather_code].day.image;
+
+            daily_icon_weather.src =
+              icons_weather[dataWeather.daily.weather_code[0]].day.image;
+
+            // dataWeather.daily.time.forEach((element, index) => {
+            //   daily_day[index].innerText = element;
+            // });
+
+            // daily_day[0].innerText = "dataWeather.daily.time[0]";
+            console.log(dataWeather.daily.time[0]);
+
+            // code check data icons
+            // console.log(
+            //   icons_weather[dataWeather.current.weather_code].day.image
+            // );
+          }
+
+          console.log(dataWeather);
+          console.log(icons_weather);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    </script>
 
     <!-- </div> -->
   </body>
